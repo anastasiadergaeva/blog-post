@@ -1,12 +1,56 @@
 .body {
     background-color: rgba(80, 151, 65, 0.58);
     font-family: 'Dancing Script', cursive;
-    font-size: 25px;
+    font-size: 10px;
+}
+
+@media (max-width: 900px) {
+    .body {
+        max-width: 600px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .main {
+            display: grid;
+            grid-template-areas: "logo"
+                "form"
+                "content";
+            gap: 1em;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    /* здесь ваши стили для планшета */
+}
+
+@media (max-width: 640px) {
+    .body {
+        max-width: 480px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-areas: "logo"
+            "form"
+            "content";
+        gap: 1em;
+    }
+
+    .input {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .logo {
-    width: 200px;
-    height: 250px;
+    width: 90px;
+    height: 115px;
 }
 
 .main {
@@ -32,13 +76,13 @@
 .input__header {
     width: 200px;
     height: 20px;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .input__text {
     width: 200px;
     height: 20px;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 .input__button {
