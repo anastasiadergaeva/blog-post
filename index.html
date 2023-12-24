@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog post</title>
+    <style>
+        /* .body {
+            max-width: 1440px;
+            margin: 0 auto;
+            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
+        } */
+
+        .logo {
+            width: 100px;
+            height: 125px;
+        }
+
+        .main {
+            display: grid;
+            grid-template-areas: "logo form"
+                "0 content";
+            gap: 1em;
+        }
+
+        .logo {
+            grid-area: logo;
+        }
+
+        .form {
+            grid-area: form;
+        }
+
+        .posts {
+            grid-area: content;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <main class="main">
+        <img src="assets/images/logo.png" alt="logo" class="logo">
+        <form class="form">
+            <h1 class="form__header">Новый пост</h1>
+            <div class="input">
+                <input type="text" placeholder="Заголовок поста" class="input__header">
+                <input type="text" placeholder="Текст поста" class="input__text">
+                <button class="input__button">Создать пост</button>
+            </div>
+        </form>
+        <div class="posts"></div>
+    </main>
+
+    <script src="assets/script/index.js"></script>
+</body>
+
+</html>
