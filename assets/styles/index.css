@@ -1,11 +1,12 @@
 .body {
     background-color: rgba(80, 151, 65, 0.58);
     font-family: 'Dancing Script', cursive;
+    font-size: 25px;
 }
 
 .logo {
-    width: 100px;
-    height: 125px;
+    width: 200px;
+    height: 250px;
 }
 
 .main {
