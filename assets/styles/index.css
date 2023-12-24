@@ -1,0 +1,46 @@
+.body {
+    background-color: rgba(80, 151, 65, 0.58);
+    font-family: 'Dancing Script', cursive;
+}
+
+.logo {
+    width: 100px;
+    height: 125px;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: "logo form"
+        "0 content";
+    gap: 1em;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.form {
+    grid-area: form;
+}
+
+.posts {
+    grid-area: content;
+    background-color: rgba(119, 152, 113, 0.58);
+}
+
+.input__header {
+    width: 200px;
+    height: 20px;
+}
+
+.input__text {
+    width: 200px;
+    height: 20px;
+}
+
+.input__button {
+    border-radius: 1px;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+}
