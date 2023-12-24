@@ -2,12 +2,15 @@ const button = document.querySelector('.input__button');
 const container = document.querySelector('.posts');
 
 function createPost(post) {
-    return `
+    const postContainer = document.createElement('div');
+    postContainer.className = 'posts__post'
+    postContainer.innerHTML = `
         <div class="posts__post">
         <h2>${post.title}</h2>
         <p>${post.body}</p>
         </div>
     `;
+    container.append(postContainer);
 }
 
 //Создаем функцию, которая будет очищать поле ввода
@@ -18,9 +21,7 @@ function cleanInputs() {
 
 function sendPost() {
     const header = document.querySelector('.input__header').value;
-    console.log(header);
     const text = document.querySelector('.input__text').value;
-    console.log(text);
 
     const postData = {
         title: `${header}`,
@@ -38,6 +39,8 @@ function sendPost() {
         .then(response => response.json())
         .then(data => createPost(data))
         .catch(error => console.log(error));
+
+    cleanInputs()
 }
 
 button.addEventListener('click', sendPost);
